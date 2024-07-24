@@ -1,0 +1,10 @@
+https://www.youtube.com/watch?studentName=bhargavi&fatherName=pramod&motherName=manju
+
+https://www.youtube.com/watch/bhargavi/pramod/manju
+
+varargs = String...
+
+
+    how to get values of a field from application.properties file into a variable
+    @Value("${spring.application.name}")
+    private String applicationName;
