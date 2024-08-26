@@ -1,57 +1,54 @@
 package com.example.bhargavi_spring_practice_1.model;
 
-import org.springframework.stereotype.Component;
+import jakarta.persistence.*;
 
-@Component
+@Entity
+@Table(name = "student_table")
 public class Student {
 
-    private Long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer roll_no;
+    private String name;
+    private Integer contact_no;
 
-    private String studentName;
+    private Integer age;
+    private String school_name;
 
-    private String studentFathersName;
-
-    private Integer marks;
-
-    public Student() {
+    public Integer getAge() {
+        return age;
     }
 
-    public Student(Long id, String studentName, String studentFathersName, Integer marks) {
-        this.id = id;
-        this.studentName = studentName;
-        this.studentFathersName = studentFathersName;
-        this.marks = marks;
+    public void setAge(Integer age) {
+        this.age = age;
     }
 
-    public Long getId() {
-        return id;
+    public Integer getRoll_no() {
+        return this.roll_no;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setRoll_no(Integer id) {
+        this.roll_no = id;
     }
 
-    public String getStudentName() {
-        return studentName;
+    public String getName() {
+        return this.name;
     }
 
-    public void setStudentName(String studentName) {
-        this.studentName = studentName;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getStudentFathersName() {
-        return studentFathersName;
+    public Integer getContact_no() {
+        return this.contact_no;
     }
-
-    public void setStudentFathersName(String studentFathersName) {
-        this.studentFathersName = studentFathersName;
+    public void setContact_no(Integer contact_no) {
+        this.contact_no = contact_no;
     }
-
-    public Integer getMarks() {
-        return marks;
+    public String getSchool_name () {
+        return this.school_name;
     }
-
-    public void setMarks(Integer marks) {
-        this.marks = marks;
+    public void setSchool_name(String school_name) {
+        this.school_name = school_name;
     }
 }
